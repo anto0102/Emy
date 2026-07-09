@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=280">
+  <title>Emy</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Emy</h1>
+
+    <div class="toggle-row">
+      <label class="toggle-label" for="toggleEnabled">
+        <span id="toggleText">Active</span>
+        <input type="checkbox" id="toggleEnabled" checked>
+        <span class="toggle-track">
+          <span class="toggle-thumb"></span>
+        </span>
+      </label>
+    </div>
+
+    <div id="statusBox" class="status-box">
+      <div class="status-row">
+        <span class="status-key">Scriptlet</span>
+        <span class="status-val" id="localVersion">-</span>
+      </div>
+      <div class="status-row">
+        <span class="status-key">Latest</span>
+        <span class="status-val" id="remoteVersion">-</span>
+      </div>
+      <div id="updateBanner" class="update-banner hidden">
+        A newer scriptlet is available. Update the extension.
+      </div>
+    </div>
+
+    <button id="btnUpdate" class="btn" type="button">Update filters</button>
+    <div id="updateStatus" class="status-text"></div>
+
+    <div class="debug-toggle-row">
+      <label for="showDebug">
+        <input type="checkbox" id="showDebug"> Show debug
+      </label>
+    </div>
+
+    <div id="debugSection" class="debug-section hidden">
+      <textarea id="debugLog" readonly rows="8"></textarea>
+      <div class="debug-buttons">
+        <button id="btnClearLog" class="btn btn-small" type="button">Clear log</button>
+        <button id="btnCheckScriptlet" class="btn btn-small" type="button">Check scriptlet</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

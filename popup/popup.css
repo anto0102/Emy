@@ -1,0 +1,192 @@
+/* popup.css — Emy popup */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: none !important;
+  animation: none !important;
+}
+
+body {
+  width: 280px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 13px;
+  background: #2b2b2b;
+  color: #f0f0f0;
+}
+
+.container {
+  padding: 14px;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #f0f0f0;
+}
+
+/* Toggle */
+.toggle-row {
+  margin-bottom: 12px;
+}
+
+.toggle-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  user-select: none;
+}
+
+.toggle-label input[type="checkbox"] {
+  display: none;
+}
+
+.toggle-track {
+  width: 36px;
+  height: 20px;
+  background: #555;
+  border-radius: 10px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.toggle-thumb {
+  width: 16px;
+  height: 16px;
+  background: #ccc;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+}
+
+.toggle-label input:checked + .toggle-track {
+  background: #2e5e2e;
+}
+
+.toggle-label input:checked + .toggle-track .toggle-thumb {
+  left: 18px;
+  background: #8fbc8f;
+}
+
+/* Status box */
+.status-box {
+  background: #1f1f1f;
+  border: 1px solid #3a3a3a;
+  border-radius: 4px;
+  padding: 8px 10px;
+  margin-bottom: 10px;
+}
+
+.status-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  padding: 2px 0;
+}
+
+.status-key {
+  color: #999;
+}
+
+.status-val {
+  color: #f0f0f0;
+  font-family: monospace;
+}
+
+.update-banner {
+  margin-top: 6px;
+  background: #ff8c00;
+  color: #1b1b1b;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 6px 8px;
+  border-radius: 3px;
+}
+
+.update-banner.hidden {
+  display: none;
+}
+
+/* Buttons */
+.btn {
+  display: block;
+  width: 100%;
+  padding: 6px 10px;
+  border: 1px solid #555;
+  background: #3a3a3a;
+  color: #f0f0f0;
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.btn:hover {
+  background: #454545;
+}
+
+.btn:active {
+  background: #505050;
+}
+
+.btn-small {
+  width: auto;
+  display: inline-block;
+  padding: 4px 8px;
+  font-size: 11px;
+}
+
+.status-text {
+  font-size: 11px;
+  color: #999;
+  margin-top: 4px;
+  min-height: 14px;
+}
+
+/* Debug */
+.debug-toggle-row {
+  margin-top: 12px;
+  font-size: 12px;
+}
+
+.debug-toggle-row label {
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.debug-toggle-row input[type="checkbox"] {
+  accent-color: #2e5e2e;
+}
+
+.debug-section {
+  margin-top: 8px;
+}
+
+.debug-section.hidden {
+  display: none;
+}
+
+.debug-section textarea {
+  width: 100%;
+  background: #1e1e1e;
+  color: #b0b0b0;
+  border: 1px solid #444;
+  border-radius: 3px;
+  font-family: monospace;
+  font-size: 10px;
+  padding: 6px;
+  resize: none;
+}
+
+.debug-buttons {
+  margin-top: 6px;
+  display: flex;
+  gap: 6px;
+}

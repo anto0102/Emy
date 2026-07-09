@@ -1,0 +1,31 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build extension zip
+        run: |
+          TAG="${{ github.ref_name }}"
+          VERSION="${TAG#v}"
+          mkdir -p tmp/emy
+          cp -r manifest.json background.js content.js filters lib popup icons tmp/emy/
+          cd tmp && zip -r "../emy-${VERSION}.zip" emy/ && cd .. && rm -rf tmp
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: Emy ${{ github.ref_name }}
+          generate_release_notes: true
+          files: emy-*.zip
+          make_latest: true
