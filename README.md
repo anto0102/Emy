@@ -419,7 +419,7 @@ Open `background.js` and change:
 
 ```js
 const GITHUB_OWNER  = 'anto0102';
-const GITHUB_REPO   = 'emy-filters';
+const GITHUB_REPO   = 'Emy';
 const GITHUB_BRANCH = 'main';
 ```
 
@@ -472,9 +472,9 @@ for the full schema.
 
 ```json
 {
-  "version": "2.1.0",
-  "minExtensionVersion": "1.1.0",
-  "updatedAt": "2026-07-09T12:00:00Z",
+  "version": "2.1.1",
+  "minExtensionVersion": "1.1.1",
+  "updatedAt": "2026-07-09T18:40:00Z",
   "message": "Hot-fix for new YouTube ad key.",
   "changelogUrl": "https://github.com/anto0102/Emy/blob/main/CHANGELOG.md"
 }
@@ -489,7 +489,7 @@ listing when you raise it.
 
 ```js
 const GITHUB_OWNER  = 'anto0102';
-const GITHUB_REPO   = 'emy-filters';
+const GITHUB_REPO   = 'Emy';
 const GITHUB_BRANCH = 'main';
 ```
 
